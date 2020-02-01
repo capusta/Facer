@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - apt:
+      name: ['tig','python3-pip','cmake','python-opencv']
+    - pip:
+        name: ['opencv-python']
+        executable: /usr/bin/pip3
+    - pip:
+        requirements: /vagrant/requirements.txt
+        executable: /usr/bin/pip3
+    - lineinfile:
+        path: /home/vagrant/.bashrc
+        line: cd /vagrant; shopt -s histappend;
