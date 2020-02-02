@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - apt:
-      name: ['tig','python3-pip','cmake','python-opencv']
+        name: ['tig','python3-pip','cmake','python-opencv']
     - pip:
         name: ['opencv-python']
         executable: /usr/bin/pip3
