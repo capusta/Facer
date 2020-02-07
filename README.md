@@ -51,6 +51,12 @@ plt.imshow(average_face)
 plt.show()
 ```
 
+## Use Vagrant VM
+Install (vagrant)[https://www.vagrantup.com/docs/installation/]
+```bash
+vagrant up
+```
+
 Facer also supports creating animated GIFs of the averaging process:
 
 ```python
